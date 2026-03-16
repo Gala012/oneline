@@ -218,11 +218,6 @@ class OneLineSettingsView extends GetView<OneLineSettingsLogic> {
             'Made with ❤️',
             style: TextStyle(fontSize: 13.sp, color: const Color(0xFF9CA3AF)),
           ),
-          SizedBox(height: 8.h),
-          Text(
-            '© 2026 OneLine',
-            style: TextStyle(fontSize: 11.sp, color: const Color(0xFFD1D5DB)),
-          ),
         ],
       ),
     );

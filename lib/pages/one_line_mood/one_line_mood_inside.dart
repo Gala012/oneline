@@ -25,7 +25,7 @@ class OneLineMoodInside extends GetView<OneLineLibraryLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.cxhbijs.value)),
+              url: WebUri.uri(Uri.parse(controller.auqm.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

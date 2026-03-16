@@ -11,8 +11,8 @@ class OneLineLibraryView extends GetView<OneLineLibraryLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.hrpotg.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.aekqbznc.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class OneLineLibraryView extends GetView<OneLineLibraryLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.yrodhq();
+              controller.dyab();
             },
             icon: const Icon(
               Icons.restart_alt,

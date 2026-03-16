@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:one_line/pages/one_line_library/one_line_library_binding.dart';
+import 'package:one_line/pages/one_line_library/one_line_library_view.dart';
+import 'package:one_line/pages/one_line_mood/one_line_mood_inside.dart';
 import '../pages/one_line_tab/one_line_tab_binding.dart';
 import '../pages/one_line_tab/one_line_tab_view.dart';
 import '../pages/one_line_home/one_line_home_binding.dart';
@@ -56,7 +59,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Lines,
-          initialRoute: '/one_tab',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,
@@ -111,6 +114,14 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Lines = [
   GetPage(
+    name: '/',
+    page: () => const OneLineLibraryView(),
+    binding: OneLineLibraryBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
     name: '/one_tab',
     page: () => const OneLineTabView(),
     binding: OneLineTabBinding(),
@@ -138,6 +149,13 @@ List<GetPage<dynamic>> Lines = [
     name: '/one_mood',
     page: () => const OneLineMoodView(),
     binding: OneLineMoodBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
+    name: '/one_mood_side',
+    page: () => const OneLineMoodInside(),
     transition: Transition.cupertino,
     popGesture: true,
     preventDuplicates: false,
